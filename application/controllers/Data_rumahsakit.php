@@ -56,15 +56,15 @@ class Data_rumahsakit extends REST_Controller {
     public function index_put() {
         $id = $this->put('id');
         $data = array(
-                'id'    => $this->post('id'),
-                'tahun'    => $this->post('tahun'),
-                'namaRS'   => $this->post('namaRS'),
-                'kelas'  => $this->post('kelas'),
-                'kabKota'  => $this->post('kabKota'),
-                'tglMulai'   => $this->post('tglMulai'),
-                'tglMasaBerlaku'  => $this->post('tglMasaBerlaku'),
-                'status'    => $this->post('status'),
-                'tglUpdate'    => $this->post('tglUpdate'));
+                'id'    => $this->put('id'),
+                'tahun'    => $this->put('tahun'),
+                'namaRS'   => $this->put('namaRS'),
+                'kelas'  => $this->put('kelas'),
+                'kabKota'  => $this->put('kabKota'),
+                'tglMulai'   => $this->put('tglMulai'),
+                'tglMasaBerlaku'  => $this->put('tglMasaBerlaku'),
+                'status'    => $this->put('status'),
+                'tglUpdate'    => $this->put('tglUpdate'));
         $this->db->where('id', $id);
         $update = $this->db->update('rumahsakit', $data);
         if ($update) {
